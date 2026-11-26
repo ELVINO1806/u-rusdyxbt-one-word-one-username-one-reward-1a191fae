@@ -1,5 +1,7 @@
-import os
-LINE = "ariandhykevz"
-os.makedirs("/output", exist_ok=True)
-with open("/output/entry.txt", "w", encoding="utf-8") as f:
-    f.write(LINE)
+
+from pathlib import Path
+
+ENTRY_WORD = "ariandhykevz"
+
+Path("/output").mkdir(parents=True, exist_ok=True)
+Path("/output/entry.txt").write_text(ENTRY_WORD, encoding="utf-8")
